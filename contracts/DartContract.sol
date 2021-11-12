@@ -1,6 +1,6 @@
 pragma solidity >=0.4.16 <0.9.0;
 
-contract dartContract {
+contract DartContract {
    
     struct dProductStruct{
        
