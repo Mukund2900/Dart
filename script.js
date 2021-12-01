@@ -8,11 +8,13 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-
-
 app.get('/', (req, res) => {
+  res.send('our project!');
+})
+
+
+app.get('/newProduct', (req, res) => {
   console.log("basic page; ");
-  //Easy way (Web3 + @truffle/hdwallet-provider)
   const init3 = async () => {
     const provider = new Provider(privateKey, 'https://rinkeby.infura.io/v3/26b17999fdb04ae78a3fd470a08acdbd'); 
     const web3 = new Web3(provider);
@@ -21,12 +23,8 @@ app.get('/', (req, res) => {
       MyContract.abi,
       MyContract.networks[networkId].address
     );
-
-    // console.log(await myContract.methods.data().call());
-    // console.log(`Old data value: ${await myContract.methods.data().call()}`);
     const receipt = await myContract.methods.addProduct("1" , "2" , "3" , "4").send({ from: address });
     console.log(`Transaction hash: ${receipt.transactionHash}`);
-    // console.log(`New data value: ${await myContract.methods.data().call()}`);
   }
 
   init3();
@@ -35,9 +33,6 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/newProduct', (req, res) => {
-  res.send('new!');
-})
 
 
 app.listen(port, () => {
