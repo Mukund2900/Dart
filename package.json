@@ -1,0 +1,22 @@
+{
+  "name": "dart",
+  "version": "1.0.0",
+  "description": "Dart  dartserverx.software dartservery.software",
+  "main": "script.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mukund2900/Dart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mukund2900/Dart/issues"
+  },
+  "homepage": "https://github.com/Mukund2900/Dart#readme"
+}
