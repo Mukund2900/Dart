@@ -6,6 +6,7 @@ const privateKey = '0xa0d2a1e0a4bb05630795e059a47e64c0343fe199791b3c46f3ee02ef82
 const infuraUrl = 'https://rinkeby.infura.io/v3/26b17999fdb04ae78a3fd470a08acdbd'; 
 const express = require('express')
 const app = express()
+const hostname = '0.0.0.0';
 const port = process.env.PORT  || 3000
 
 app.get('/', (req, res) => {
@@ -35,6 +36,4 @@ app.get('/newProduct', (req, res) => {
 
 
 
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(port, () => console.log(`Example app listening at http://${hostname}:${port}`))
