@@ -36,4 +36,4 @@ app.get('/newProduct', (req, res) => {
 
 
 
-app.listen(port,hostname, () => console.log(`Example app listening at http://${hostname}:${port}`))
+app.listen(port,hostname, () => console.log(`Example app listening at http://${hostname}:${port}`));
